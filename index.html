@@ -1,258 +1,2568 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5B38MSFN');</script>
-<!-- End Google Tag Manager -->
+
+  <!-- =========================================================
+       GOOGLE TAG MANAGER
+       Existing GTM Container
+       ========================================================= -->
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5B38MSFN');
+  </script>
+  <!-- End Google Tag Manager -->
+
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="CK Performance Academy - Learn Performance Marketing, build real campaigns and develop practical skills in Google Ads, Meta Ads, Analytics and more.">
+
   <meta name="robots" content="noindex, nofollow">
-  <title>SDM Labs - Practice Landing Page</title>
 
-  <!-- ========== TRACKING CODES GO HERE ========== -->
+  <title>CK Performance Academy | Learn Performance Marketing. Build Real Campaigns.</title>
 
-  <!-- Google Tag Manager (paste GTM head snippet below) -->
-  <!-- <script>...</script> -->
-
-  <!-- Meta Pixel Base Code (paste below) -->
-  <!-- <script>...</script> -->
-
-  <!-- Google Ads gtag.js (paste below) -->
-  <!-- <script>...</script> -->
-
-  <!-- Microsoft Clarity (paste below) -->
-  <!-- <script>...</script> -->
-
-  <!-- ========== END TRACKING CODES ========== -->
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* =========================================================
+       RESET
+       ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f5f7fa;
-      color: #333;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Arial, sans-serif;
+      background: #ffffff;
+      color: #172033;
+      line-height: 1.6;
     }
-    .hero {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
+
+    img {
+      max-width: 100%;
+      display: block;
     }
-    .hero h1 {
-      font-size: 32px;
-      margin-bottom: 12px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
-    .hero p {
-      font-size: 18px;
-      opacity: 0.85;
-      max-width: 500px;
-      margin: 0 auto 30px;
+
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
     }
-    .hero .badge {
-      display: inline-block;
-      background: rgba(255,255,255,0.15);
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 13px;
-      margin-bottom: 20px;
-      letter-spacing: 1px;
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
     }
-    .form-section {
-      max-width: 420px;
-      margin: -40px auto 40px;
-      background: white;
-      padding: 32px 28px;
-      border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+
+    .section {
+      padding: 90px 0;
     }
-    .form-section h2 {
-      font-size: 20px;
-      margin-bottom: 6px;
-      color: #1a1a2e;
+
+    .section-light {
+      background: #f7f9fc;
     }
-    .form-section .subtitle {
+
+    .section-dark {
+      background: #111827;
+      color: #ffffff;
+    }
+
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #edf0f5;
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 21px;
+      color: #111827;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: #e85d04;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
       font-size: 14px;
-      color: #666;
-      margin-bottom: 20px;
+      font-weight: 600;
+      color: #4b5563;
     }
+
+    .nav-links a:hover {
+      color: #e85d04;
+    }
+
+    .nav-cta {
+      background: #e85d04;
+      color: #ffffff !important;
+      padding: 11px 18px;
+      border-radius: 8px;
+    }
+
+    .mobile-menu {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .hero {
+      background:
+        radial-gradient(circle at 10% 20%, rgba(232,93,4,0.15), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(37,99,235,0.13), transparent 30%),
+        #111827;
+      color: white;
+      padding: 95px 0 110px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.13);
+      padding: 7px 13px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 22px;
+      color: #ffd7c2;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      background: #e85d04;
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 5vw, 65px);
+      line-height: 1.06;
+      letter-spacing: -2.5px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #ff7a2f;
+    }
+
+    .hero-description {
+      font-size: 18px;
+      color: #cbd5e1;
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 50px;
+      padding: 0 23px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 800;
+      transition: 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #e85d04;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #d94f00;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.25);
+      color: white;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .hero-note {
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    .hero-card {
+      background: white;
+      color: #172033;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+    }
+
+    .hero-card h3 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .hero-card-subtitle {
+      color: #64748b;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
     .form-group {
-      margin-bottom: 16px;
+      margin-bottom: 15px;
     }
+
     .form-group label {
       display: block;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 6px;
-      color: #444;
+      color: #374151;
     }
+
     .form-group input,
     .form-group select {
       width: 100%;
-      padding: 12px 14px;
-      border: 1.5px solid #ddd;
-      border-radius: 8px;
-      font-size: 15px;
-      transition: border-color 0.2s;
+      height: 48px;
+      border: 1px solid #dbe1e8;
+      border-radius: 7px;
+      padding: 0 13px;
+      font-size: 14px;
+      outline: none;
+      background: #ffffff;
     }
+
     .form-group input:focus,
     .form-group select:focus {
-      outline: none;
-      border-color: #0f3460;
+      border-color: #e85d04;
+      box-shadow: 0 0 0 3px rgba(232,93,4,0.08);
     }
-    .submit-btn {
+
+    .form-submit {
       width: 100%;
-      padding: 14px;
-      background: #e94560;
-      color: white;
+      height: 50px;
       border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: 600;
+      border-radius: 7px;
+      background: #e85d04;
+      color: white;
+      font-weight: 800;
+      font-size: 15px;
       cursor: pointer;
-      transition: background 0.2s;
-      margin-top: 4px;
+      margin-top: 5px;
     }
-    .submit-btn:hover {
-      background: #d63851;
+
+    .form-submit:hover {
+      background: #d94f00;
     }
-    .trust-points {
-      max-width: 420px;
-      margin: 0 auto 40px;
-      padding: 0 20px;
-    }
-    .trust-points h3 {
+
+    .form-small {
       text-align: center;
-      font-size: 16px;
-      color: #666;
-      margin-bottom: 16px;
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 11px;
     }
-    .trust-item {
+
+
+    /* =========================================================
+       TRUST BAR
+       ========================================================= */
+
+    .trust-bar {
+      border-bottom: 1px solid #edf0f5;
+      background: #ffffff;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      padding: 24px 0;
+      gap: 20px;
+    }
+
+    .trust-box {
       display: flex;
       align-items: center;
-      gap: 12px;
-      padding: 12px 0;
-      border-bottom: 1px solid #eee;
+      gap: 11px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #374151;
     }
-    .trust-item:last-child { border-bottom: none; }
-    .trust-icon {
+
+    .trust-box-icon {
       width: 36px;
       height: 36px;
-      background: #e8f4f8;
+      background: #fff3eb;
+      color: #e85d04;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      flex-shrink: 0;
+    }
+
+
+    /* =========================================================
+       SECTION HEADINGS
+       ========================================================= */
+
+    .section-heading {
+      max-width: 720px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: #e85d04;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(30px,4vw,44px);
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: #64748b;
+      font-size: 16px;
+    }
+
+
+    /* =========================================================
+       PROBLEM SECTION
+       ========================================================= */
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .problem-copy h2 {
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .problem-copy p {
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+
+    .problem-list {
+      list-style: none;
+    }
+
+    .problem-list li {
+      display: flex;
+      gap: 11px;
+      margin-bottom: 13px;
+      color: #374151;
+      font-size: 15px;
+    }
+
+    .problem-list li::before {
+      content: "✕";
+      color: #dc2626;
+      font-weight: 900;
+    }
+
+    .solution-card {
+      background: #111827;
+      color: white;
+      padding: 35px;
+      border-radius: 16px;
+    }
+
+    .solution-card h3 {
+      font-size: 25px;
+      margin-bottom: 14px;
+    }
+
+    .solution-card p {
+      color: #cbd5e1;
+      margin-bottom: 22px;
+    }
+
+    .solution-points {
+      display: grid;
+      gap: 13px;
+    }
+
+    .solution-point {
+      display: flex;
+      gap: 11px;
+      font-size: 14px;
+    }
+
+    .solution-point span {
+      color: #ff7a2f;
+      font-weight: 900;
+    }
+
+
+    /* =========================================================
+       WHY US
+       ========================================================= */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+
+    .why-card {
+      padding: 28px;
+      border: 1px solid #e7ebf0;
+      border-radius: 12px;
+      background: white;
+      transition: 0.2s ease;
+    }
+
+    .why-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(15,23,42,0.08);
+    }
+
+    .why-icon {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: #fff3eb;
+      color: #e85d04;
+      font-size: 21px;
+      margin-bottom: 18px;
+    }
+
+    .why-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+
+    /* =========================================================
+       DIFFERENTIATOR
+       ========================================================= */
+
+    .difference {
+      background: #111827;
+      color: white;
+    }
+
+    .difference-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .difference h2 {
+      font-size: 40px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .difference-copy p {
+      color: #cbd5e1;
+      margin-bottom: 22px;
+    }
+
+    .difference-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .difference-item {
+      display: flex;
+      gap: 13px;
+      padding: 16px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+    }
+
+    .difference-item strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .difference-item p {
+      margin: 0;
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    .check {
+      color: #ff7a2f;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+
+    /* =========================================================
+       CURRICULUM
+       ========================================================= */
+
+    .curriculum-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 18px;
+    }
+
+    .module {
+      border: 1px solid #e5e9ef;
+      border-radius: 11px;
+      padding: 24px;
+      background: white;
+    }
+
+    .module-number {
+      font-size: 12px;
+      font-weight: 900;
+      color: #e85d04;
+      margin-bottom: 7px;
+    }
+
+    .module h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .module p {
+      font-size: 14px;
+      color: #64748b;
+    }
+
+
+    /* =========================================================
+       PACKAGES
+       ========================================================= */
+
+    .pricing {
+      background: #f7f9fc;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .price-card {
+      background: white;
+      border: 1px solid #e3e7ed;
+      border-radius: 14px;
+      padding: 30px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .price-card.featured {
+      border: 2px solid #e85d04;
+      box-shadow: 0 18px 45px rgba(232,93,4,0.13);
+      transform: translateY(-8px);
+    }
+
+    .popular {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #e85d04;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .price-card h3 {
+      font-size: 21px;
+      margin-bottom: 5px;
+    }
+
+    .price-duration {
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 18px;
+    }
+
+    .price {
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+
+    .price span {
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .price-features {
+      list-style: none;
+      display: grid;
+      gap: 11px;
+      margin-bottom: 25px;
+      flex-grow: 1;
+    }
+
+    .price-features li {
+      font-size: 14px;
+      color: #475569;
+      display: flex;
+      gap: 9px;
+    }
+
+    .price-features li::before {
+      content: "✓";
+      color: #16a34a;
+      font-weight: 900;
+    }
+
+    .price-btn {
+      width: 100%;
+      padding: 13px;
+      border-radius: 7px;
+      border: 1px solid #e85d04;
+      color: #e85d04;
+      background: white;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .featured .price-btn {
+      background: #e85d04;
+      color: white;
+    }
+
+    .urgency {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 13px;
+      color: #b45309;
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       PROCESS
+       ========================================================= */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 20px;
+    }
+
+    .process-card {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .process-number {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: #111827;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+    }
+
+    .process-card h3 {
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+
+    .process-card p {
+      color: #64748b;
+      font-size: 13px;
+    }
+
+
+    /* =========================================================
+       TESTIMONIALS
+       ========================================================= */
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+
+    .testimonial {
+      background: white;
+      border: 1px solid #e6eaf0;
+      border-radius: 12px;
+      padding: 26px;
+    }
+
+    .stars {
+      color: #f59e0b;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .testimonial p {
+      font-size: 14px;
+      color: #475569;
+      margin-bottom: 20px;
+    }
+
+    .person {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      background: #111827;
+      color: white;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
-      flex-shrink: 0;
+      font-weight: 800;
     }
-    .trust-item p {
+
+    .person strong {
       font-size: 14px;
-      color: #555;
+      display: block;
     }
-    .footer {
-      text-align: center;
-      padding: 20px;
+
+    .person span {
+      color: #94a3b8;
       font-size: 12px;
-      color: #999;
     }
-    .footer a { color: #0f3460; text-decoration: none; }
-  </style>
-</head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5B38MSFN"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-  <!-- Google Tag Manager (noscript) - paste GTM body snippet below -->
-  <!-- <noscript>...</noscript> -->
+    .testimonial-note {
+      text-align: center;
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 25px;
+    }
 
-  <div class="hero">
-    <div class="badge">SDM LABS — PRACTICE PAGE</div>
-    <h1>Learn Performance Marketing</h1>
-    <p>Master Google Ads, Meta Ads, SEO & Analytics with hands-on projects</p>
-  </div>
 
-  <div class="form-section">
-    <h2>Get a Free Demo Class</h2>
-    <p class="subtitle">Fill in your details and we'll reach out within 24 hours</p>
+    /* =========================================================
+       CAREER SECTION
+       ========================================================= */
 
-    <div class="form-group">
-      <label>Full Name</label>
-      <input type="text" placeholder="Enter your name" id="name">
-    </div>
+    .career-box {
+      background: linear-gradient(135deg,#111827,#1f2937);
+      color: white;
+      padding: 55px;
+      border-radius: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
 
-    <div class="form-group">
-      <label>Mobile Number</label>
-      <input type="tel" placeholder="Enter your mobile number" id="phone">
-    </div>
+    .career-box h2 {
+      font-size: 37px;
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
 
-    <div class="form-group">
-      <label>Interested In</label>
-      <select id="course">
-        <option value="">Select a course</option>
-        <option value="google-ads">Google Ads</option>
-        <option value="meta-ads">Meta Ads</option>
-        <option value="seo">SEO</option>
-        <option value="full-course">Full Performance Marketing</option>
-      </select>
-    </div>
+    .career-box p {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
 
-    <button class="submit-btn" onclick="handleSubmit()">Book Free Demo</button>
-  </div>
+    .career-list {
+      display: grid;
+      gap: 10px;
+    }
 
-  <div class="trust-points">
-    <h3>Why Choose SDM Classes?</h3>
-    <div class="trust-item">
-      <div class="trust-icon">🎯</div>
-      <p><strong>Live Online Classes</strong> — Real-time interaction, not recorded videos</p>
-    </div>
-    <div class="trust-item">
-      <div class="trust-icon">💼</div>
-      <p><strong>Real Client Projects</strong> — Work on actual campaigns during training</p>
-    </div>
-    <div class="trust-item">
-      <div class="trust-icon">🌐</div>
-      <p><strong>Telugu & English</strong> — Learn in the language you're comfortable with</p>
-    </div>
-    <div class="trust-item">
-      <div class="trust-icon">📊</div>
-      <p><strong>Placement Support</strong> — Resume building, interview prep & job assistance</p>
-    </div>
-  </div>
+    .career-list div {
+      font-size: 14px;
+      color: #e2e8f0;
+    }
 
-  <div class="footer">
-    <p>Built with ❤️ at <a href="https://sdmclasses.com" target="_blank">SDM Classes</a> | Practice Landing Page</p>
-  </div>
+    .career-list div::before {
+      content: "✓";
+      color: #ff7a2f;
+      margin-right: 9px;
+      font-weight: 900;
+    }
 
-  <script>
-    function handleSubmit() {
-      const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
-      const course = document.getElementById('course').value;
 
-      if (!name || !phone) {
-        alert('Please fill in your name and mobile number.');
-        return;
+    /* =========================================================
+       FAQ
+       ========================================================= */
+
+    .faq {
+      max-width: 820px;
+      margin: auto;
+    }
+
+    details {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 20px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 16px;
+      list-style: none;
+      position: relative;
+      padding-right: 30px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      font-size: 22px;
+      color: #e85d04;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      margin-top: 12px;
+      color: #64748b;
+      font-size: 14px;
+      max-width: 700px;
+    }
+
+
+    /* =========================================================
+       FINAL CTA
+       ========================================================= */
+
+    .final-cta {
+      background: #fff3eb;
+      text-align: center;
+      padding: 85px 20px;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(32px,4vw,46px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .final-cta p {
+      max-width: 620px;
+      margin: 0 auto 25px;
+      color: #64748b;
+    }
+
+    .final-cta .phone {
+      display: block;
+      margin-top: 15px;
+      font-weight: 800;
+      color: #e85d04;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      background: #0b1120;
+      color: #ffffff;
+      padding: 65px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 45px;
+    }
+
+    .footer-brand h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand h3 span {
+      color: #ff7a2f;
+    }
+
+    .footer-brand p {
+      color: #94a3b8;
+      font-size: 14px;
+      max-width: 330px;
+      margin-bottom: 18px;
+    }
+
+    .footer-tagline {
+      color: #cbd5e1 !important;
+      font-weight: 700;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #94a3b8;
+      font-size: 13px;
+      margin-bottom: 9px;
+    }
+
+    .footer-col a:hover {
+      color: #ff7a2f;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: #64748b;
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+       FLOATING BUTTONS
+       ========================================================= */
+
+    .floating-actions {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .floating-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .call-btn {
+      background: #111827;
+    }
+
+    .whatsapp-btn {
+      background: #16a34a;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .hero-grid,
+      .problem-grid,
+      .difference-grid,
+      .career-box {
+        grid-template-columns: 1fr;
       }
 
-      // ========== CONVERSION TRACKING EVENTS GO HERE ==========
+      .hero {
+        padding: 70px 0 80px;
+      }
 
-      // Google Ads Conversion (uncomment and add your conversion ID)
-      // gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/XXXXXXXXXXXX'});
+      .hero-card {
+        max-width: 600px;
+        margin: auto;
+      }
 
-      // Meta Pixel Lead Event (uncomment when pixel is installed)
-      // fbq('track', 'Lead');
+      .trust-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
 
-      // ========== END CONVERSION TRACKING ==========
+      .why-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
 
-      alert('Thank you ' + name + '! We will contact you soon.');
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        margin: auto;
+      }
+
+      .price-card.featured {
+        transform: none;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
     }
+
+    @media (max-width: 650px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .trust-grid,
+      .why-grid,
+      .curriculum-grid,
+      .process-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .career-box {
+        padding: 32px 24px;
+      }
+
+      .career-box h2,
+      .problem-copy h2,
+      .difference h2 {
+        font-size: 31px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <!-- =========================================================
+       GOOGLE TAG MANAGER NOSCRIPT
+       ========================================================= -->
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-5B38MSFN"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden">
+    </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="#" class="logo">
+        CK <span>Performance Academy</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#curriculum">Curriculum</a>
+        <a href="#programs">Programs</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#faq">FAQ</a>
+        <a href="#enquire" class="nav-cta">Book Free Counselling</a>
+      </nav>
+
+      <div class="mobile-menu">☰</div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================================
+       HERO
+       ========================================================= -->
+
+  <section class="hero">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          PRACTICAL PERFORMANCE MARKETING TRAINING
+        </div>
+
+        <h1>
+          Learn Performance Marketing.
+          <span>Build Real Campaigns.</span>
+          Drive Growth.
+        </h1>
+
+        <p class="hero-description">
+          Learn the skills businesses actually use to generate leads,
+          customers and revenue through Google Ads, Meta Ads,
+          analytics, tracking and conversion optimisation.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#enquire" class="btn btn-primary">
+            Book a Free Counselling Call →
+          </a>
+
+          <a href="#programs" class="btn btn-outline">
+            View Programs
+          </a>
+
+        </div>
+
+        <p class="hero-note">
+          ✓ Practical learning &nbsp; ✓ Campaign-based training
+          &nbsp; ✓ Beginner friendly
+        </p>
+
+      </div>
+
+
+      <!-- LEAD FORM -->
+
+      <div class="hero-card" id="enquire">
+
+        <h3>Start Your Performance Marketing Journey</h3>
+
+        <p class="hero-card-subtitle">
+          Tell us a little about yourself and we'll help you choose
+          the right program.
+        </p>
+
+        <form onsubmit="submitLead(event)">
+
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Mobile Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your mobile number"
+              pattern="[0-9]{10}"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="program">Interested Program</label>
+
+            <select id="program" name="program" required>
+
+              <option value="">
+                Select a program
+              </option>
+
+              <option value="3-month">
+                3-Month Performance Marketing
+              </option>
+
+              <option value="5-month">
+                5-Month Advanced Program
+              </option>
+
+              <option value="weekend">
+                Weekend Batch
+              </option>
+
+            </select>
+
+          </div>
+
+          <button type="submit" class="form-submit">
+            Get Program Details →
+          </button>
+
+          <p class="form-small">
+            Your details are used only to contact you about the program.
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       TRUST BAR
+       ========================================================= -->
+
+  <section class="trust-bar">
+
+    <div class="container trust-grid">
+
+      <div class="trust-box">
+        <div class="trust-box-icon">🎯</div>
+        Practical Campaign Learning
+      </div>
+
+      <div class="trust-box">
+        <div class="trust-box-icon">📊</div>
+        Performance-Focused Curriculum
+      </div>
+
+      <div class="trust-box">
+        <div class="trust-box-icon">💻</div>
+        Hands-On Platform Training
+      </div>
+
+      <div class="trust-box">
+        <div class="trust-box-icon">🚀</div>
+        Career-Focused Learning
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       PROBLEM
+       ========================================================= -->
+
+  <section class="section">
+
+    <div class="container problem-grid">
+
+      <div class="problem-copy">
+
+        <span class="section-label">
+          The Problem
+        </span>
+
+        <h2>
+          Watching tutorials isn't enough to become a performance marketer.
+        </h2>
+
+        <p>
+          You can learn what Google Ads and Meta Ads are.
+          But knowing how to actually plan, launch, track and optimise
+          campaigns requires practical experience.
+        </p>
+
+        <ul class="problem-list">
+
+          <li>
+            Too much theory and not enough practical execution
+          </li>
+
+          <li>
+            Learning platforms without understanding campaign strategy
+          </li>
+
+          <li>
+            Difficulty understanding metrics like CTR, CPC, CPL and ROAS
+          </li>
+
+          <li>
+            No clear idea how tracking and conversion data works
+          </li>
+
+          <li>
+            Feeling unprepared when facing a real client campaign
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="solution-card">
+
+        <h3>
+          Learn the complete performance marketing workflow.
+        </h3>
+
+        <p>
+          From understanding the business objective to analysing
+          campaign performance and improving conversions.
+        </p>
+
+        <div class="solution-points">
+
+          <div class="solution-point">
+            <span>✓</span>
+            Research & campaign planning
+          </div>
+
+          <div class="solution-point">
+            <span>✓</span>
+            Google Ads & Meta Ads
+          </div>
+
+          <div class="solution-point">
+            <span>✓</span>
+            Landing pages & CRO fundamentals
+          </div>
+
+          <div class="solution-point">
+            <span>✓</span>
+            GA4, GTM & conversion tracking
+          </div>
+
+          <div class="solution-point">
+            <span>✓</span>
+            Reporting & campaign optimisation
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       WHY CK
+       ========================================================= -->
+
+  <section class="section section-light" id="why-us">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          Why CK Performance Academy
+        </span>
+
+        <h2>
+          Built around skills you can actually use.
+        </h2>
+
+        <p>
+          The goal isn't simply to complete a course.
+          It's to understand how performance marketing works as a business function.
+        </p>
+
+      </div>
+
+
+      <div class="why-grid">
+
+        <div class="why-card">
+
+          <div class="why-icon">🎯</div>
+
+          <h3>Campaign-First Learning</h3>
+
+          <p>
+            Learn concepts through campaign planning, execution,
+            analysis and optimisation instead of theory alone.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div class="why-icon">📈</div>
+
+          <h3>Performance Mindset</h3>
+
+          <p>
+            Understand how marketers connect ad spend,
+            leads, customers, revenue and business goals.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div class="why-icon">🔎</div>
+
+          <h3>Analytics & Tracking</h3>
+
+          <p>
+            Learn the fundamentals of GA4, GTM,
+            events, conversions and campaign measurement.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div class="why-icon">💡</div>
+
+          <h3>Strategy Before Ads</h3>
+
+          <p>
+            Understand audience research, offers, funnels,
+            keywords and positioning before spending money.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div class="why-icon">🧪</div>
+
+          <h3>Testing & Optimisation</h3>
+
+          <p>
+            Learn how marketers identify problems,
+            test ideas and improve campaign performance.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div class="why-icon">💼</div>
+
+          <h3>Career Preparation</h3>
+
+          <p>
+            Build practical knowledge that can help you prepare
+            for interviews, internships and entry-level roles.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       DIFFERENTIATOR
+       ========================================================= -->
+
+  <section class="section difference">
+
+    <div class="container difference-grid">
+
+      <div class="difference-copy">
+
+        <span class="section-label">
+          What Makes Us Different
+        </span>
+
+        <h2>
+          Don't just learn marketing. Learn how marketers think.
+        </h2>
+
+        <p>
+          Performance marketing is more than clicking buttons inside
+          an advertising platform. We focus on the complete process
+          behind a successful campaign.
+        </p>
+
+        <a href="#programs" class="btn btn-primary">
+          Explore Programs →
+        </a>
+
+      </div>
+
+
+      <div class="difference-list">
+
+        <div class="difference-item">
+          <span class="check">✓</span>
+          <div>
+            <strong>Business → Funnel → Campaign</strong>
+            <p>Understand how marketing connects with the business objective.</p>
+          </div>
+        </div>
+
+        <div class="difference-item">
+          <span class="check">✓</span>
+          <div>
+            <strong>Data → Insight → Optimisation</strong>
+            <p>Use campaign data to identify what needs improvement.</p>
+          </div>
+        </div>
+
+        <div class="difference-item">
+          <span class="check">✓</span>
+          <div>
+            <strong>Ad → Landing Page → Conversion</strong>
+            <p>Understand why advertising and conversion optimisation work together.</p>
+          </div>
+        </div>
+
+        <div class="difference-item">
+          <span class="check">✓</span>
+          <div>
+            <strong>Execution → Reporting → Learning</strong>
+            <p>Develop a repeatable process for analysing campaigns.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       CURRICULUM
+       ========================================================= -->
+
+  <section class="section" id="curriculum">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          Curriculum
+        </span>
+
+        <h2>
+          Everything you need to understand modern performance marketing.
+        </h2>
+
+        <p>
+          The curriculum is structured to take you from fundamentals
+          to campaign execution, tracking and optimisation.
+        </p>
+
+      </div>
+
+
+      <div class="curriculum-grid">
+
+        <div class="module">
+          <div class="module-number">MODULE 01</div>
+          <h3>Digital Marketing Fundamentals</h3>
+          <p>
+            Digital marketing ecosystem, customer journey,
+            funnels, objectives and marketing strategy.
+          </p>
+        </div>
+
+        <div class="module">
+          <div class="module-number">MODULE 02</div>
+          <h3>Market & Competitor Research</h3>
+          <p>
+            Audience research, competitor analysis,
+            offers, positioning and customer intent.
+          </p>
+        </div>
+
+        <div class="module">
+          <div class="module-number">MODULE 03</div>
+          <h3>Google Ads</h3>
+          <p>
+            Search campaigns, keywords, match types,
+            ad copy, bidding, budgets and optimisation.
+          </p>
+        </div>
+
+        <div class="module">
+          <div class="module-number">MODULE 04</div>
+          <h3>Meta Ads</h3>
+          <p>
+            Campaign structure, objectives, audiences,
+            creatives, testing, retargeting and optimisation.
+          </p>
+        </div>
+
+        <div class="module">
+          <div class="module-number">MODULE 05</div>
+          <h3>Landing Pages & CRO</h3>
+          <p>
+            Conversion-focused landing pages, messaging,
+            CTAs, forms, trust elements and testing.
+          </p>
+        </div>
+
+        <div class="module">
+          <div class="module-number">MODULE 06</div>
+          <h3>GA4 & GTM</h3>
+          <p>
+            Analytics fundamentals, events, tags,
+            triggers, conversions and tracking structure.
+          </p>
+        </div>
+
+        <div class="module">
+          <div class="module-number">MODULE 07</div>
+          <h3>Performance Analytics</h3>
+          <p>
+            CTR, CPC, CPM, CPL, CPA, ROAS,
+            conversion rate and campaign diagnosis.
+          </p>
+        </div>
+
+        <div class="module">
+          <div class="module-number">MODULE 08</div>
+          <h3>Reporting & Optimisation</h3>
+          <p>
+            Campaign reporting, insights, budget decisions,
+            testing frameworks and optimisation workflows.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       PROGRAMS / PRICING
+       ========================================================= -->
+
+  <section class="section pricing" id="programs">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          Choose Your Program
+        </span>
+
+        <h2>
+          Learn at a pace that fits your goals.
+        </h2>
+
+        <p>
+          Choose the learning format that works best for your schedule
+          and level of commitment.
+        </p>
+
+      </div>
+
+
+      <div class="pricing-grid">
+
+
+        <!-- 3 MONTH -->
+
+        <div class="price-card">
+
+          <h3>3-Month Program</h3>
+
+          <div class="price-duration">
+            Foundation + Practical Skills
+          </div>
+
+          <div class="price">
+            ₹25,000
+          </div>
+
+          <ul class="price-features">
+
+            <li>Performance marketing fundamentals</li>
+            <li>Google Ads fundamentals</li>
+            <li>Meta Ads fundamentals</li>
+            <li>Keyword & audience research</li>
+            <li>GA4 & GTM fundamentals</li>
+            <li>Landing page & CRO basics</li>
+            <li>Campaign analysis</li>
+
+          </ul>
+
+          <a href="#enquire" class="price-btn">
+            Enquire Now
+          </a>
+
+        </div>
+
+
+        <!-- 5 MONTH -->
+
+        <div class="price-card featured">
+
+          <div class="popular">
+            MOST COMPREHENSIVE
+          </div>
+
+          <h3>5-Month Advanced Program</h3>
+
+          <div class="price-duration">
+            Deep Learning + Advanced Practice
+          </div>
+
+          <div class="price">
+            ₹30,000
+          </div>
+
+          <ul class="price-features">
+
+            <li>Complete performance marketing curriculum</li>
+            <li>Google Ads & Meta Ads</li>
+            <li>Advanced campaign strategy</li>
+            <li>Analytics & conversion tracking</li>
+            <li>Landing pages & CRO</li>
+            <li>Reporting & optimisation</li>
+            <li>Practical campaign exercises</li>
+            <li>Interview & career preparation</li>
+
+          </ul>
+
+          <a href="#enquire" class="price-btn">
+            Choose This Program
+          </a>
+
+        </div>
+
+
+        <!-- WEEKEND -->
+
+        <div class="price-card">
+
+          <h3>Weekend Batch</h3>
+
+          <div class="price-duration">
+            Flexible Learning Format
+          </div>
+
+          <div class="price">
+            ₹15,000
+          </div>
+
+          <ul class="price-features">
+
+            <li>Weekend-focused classes</li>
+            <li>Performance marketing fundamentals</li>
+            <li>Google Ads & Meta Ads basics</li>
+            <li>Campaign strategy</li>
+            <li>Analytics fundamentals</li>
+            <li>Practical assignments</li>
+            <li>Flexible for working professionals</li>
+
+          </ul>
+
+          <a href="#enquire" class="price-btn">
+            Enquire Now
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <p class="urgency">
+        ⏳ Batch sizes are kept limited for better interaction.
+        Contact us to check the next available batch.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       HOW IT WORKS
+       ========================================================= -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          How It Works
+        </span>
+
+        <h2>
+          From beginner to campaign-ready.
+        </h2>
+
+      </div>
+
+
+      <div class="process-grid">
+
+        <div class="process-card">
+
+          <div class="process-number">01</div>
+
+          <h3>Learn</h3>
+
+          <p>
+            Understand the fundamentals behind performance marketing.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="process-number">02</div>
+
+          <h3>Build</h3>
+
+          <p>
+            Apply concepts through campaign and marketing exercises.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="process-number">03</div>
+
+          <h3>Analyse</h3>
+
+          <p>
+            Read campaign data and identify opportunities for improvement.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="process-number">04</div>
+
+          <h3>Optimise</h3>
+
+          <p>
+            Develop a structured approach to improving campaign performance.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       TESTIMONIALS
+       ========================================================= -->
+
+  <section class="section section-light">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          Student Feedback
+        </span>
+
+        <h2>
+          What learners say about the experience.
+        </h2>
+
+        <p>
+          Replace these sample testimonials with verified student
+          reviews as your academy grows.
+        </p>
+
+      </div>
+
+
+      <div class="testimonial-grid">
+
+
+        <div class="testimonial">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “The practical approach helped me understand how the different
+            parts of a performance marketing campaign connect.”
+          </p>
+
+          <div class="person">
+
+            <div class="avatar">
+              A
+            </div>
+
+            <div>
+              <strong>Sample Student</strong>
+              <span>Digital Marketing Learner</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="testimonial">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “I liked that the learning was not limited to advertising
+            platforms. Analytics, tracking and optimisation were also covered.”
+          </p>
+
+          <div class="person">
+
+            <div class="avatar">
+              R
+            </div>
+
+            <div>
+              <strong>Sample Student</strong>
+              <span>Marketing Learner</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="testimonial">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “The structured curriculum made it easier for me to understand
+            performance marketing step by step.”
+          </p>
+
+          <div class="person">
+
+            <div class="avatar">
+              S
+            </div>
+
+            <div>
+              <strong>Sample Student</strong>
+              <span>Performance Marketing Learner</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <p class="testimonial-note">
+        *Testimonials shown above are sample placeholders for the practice website.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       CAREER
+       ========================================================= -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="career-box">
+
+        <div>
+
+          <span class="section-label">
+            Career Focus
+          </span>
+
+          <h2>
+            Build skills that can move you closer to real marketing roles.
+          </h2>
+
+          <p>
+            Learn the practical concepts commonly used across
+            performance marketing, paid media and digital marketing teams.
+          </p>
+
+          <a href="#enquire" class="btn btn-primary">
+            Discuss Your Career Goal →
+          </a>
+
+        </div>
+
+
+        <div class="career-list">
+
+          <div>Google Ads campaign fundamentals</div>
+          <div>Meta Ads campaign fundamentals</div>
+          <div>Marketing analytics & reporting</div>
+          <div>Conversion tracking concepts</div>
+          <div>Landing page & CRO fundamentals</div>
+          <div>Performance marketing metrics</div>
+          <div>Campaign optimisation frameworks</div>
+          <div>Interview preparation fundamentals</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       FAQ
+       ========================================================= -->
+
+  <section class="section section-light" id="faq">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span class="section-label">
+          FAQ
+        </span>
+
+        <h2>
+          Questions before you start?
+        </h2>
+
+      </div>
+
+
+      <div class="faq">
+
+        <details>
+          <summary>
+            Do I need previous digital marketing experience?
+          </summary>
+
+          <p>
+            No. The programs are structured to introduce the fundamentals
+            before moving into campaign execution and optimisation.
+          </p>
+        </details>
+
+
+        <details>
+          <summary>
+            Which program should a beginner choose?
+          </summary>
+
+          <p>
+            The 3-month program is designed as a foundation-focused option.
+            The 5-month program provides more time for deeper learning and practice.
+          </p>
+        </details>
+
+
+        <details>
+          <summary>
+            Is there a weekend batch?
+          </summary>
+
+          <p>
+            Yes. A separate weekend format is available for learners
+            who prefer a more flexible schedule.
+          </p>
+        </details>
+
+
+        <details>
+          <summary>
+            Will I learn Google Ads and Meta Ads?
+          </summary>
+
+          <p>
+            Yes. Both platforms are included in the curriculum,
+            with the depth depending on the program selected.
+          </p>
+        </details>
+
+
+        <details>
+          <summary>
+            Will analytics and tracking be covered?
+          </summary>
+
+          <p>
+            Yes. The curriculum includes fundamentals of GA4,
+            Google Tag Manager, events and conversion tracking.
+          </p>
+        </details>
+
+
+        <details>
+          <summary>
+            How can I know which program is right for me?
+          </summary>
+
+          <p>
+            Submit the enquiry form and share your current experience,
+            career goal and preferred schedule. We can then guide you
+            toward the most suitable option.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       FINAL CTA
+       ========================================================= -->
+
+  <section class="final-cta">
+
+    <div class="container">
+
+      <span class="section-label">
+        Ready To Start?
+      </span>
+
+      <h2>
+        Stop only learning about marketing.
+        Start learning how to do it.
+      </h2>
+
+      <p>
+        Get the curriculum, batch details and program information
+        before choosing the right path for you.
+      </p>
+
+      <a href="#enquire" class="btn btn-primary">
+        Book Your Free Counselling Call →
+      </a>
+
+      <a
+        href="tel:7075405295"
+        class="phone">
+        📞 7075405295
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <h3>
+            CK <span>Performance Academy</span>
+          </h3>
+
+          <p class="footer-tagline">
+            Learn Performance Marketing.
+            Build Real Campaigns.
+            Drive Growth.
+          </p>
+
+          <p>
+            Practical performance marketing education focused on
+            campaign strategy, paid advertising, analytics,
+            tracking and optimisation.
+          </p>
+
+        </div>
+
+
+        <div class="footer-col">
+
+          <h4>Programs</h4>
+
+          <a href="#programs">
+            3-Month Program
+          </a>
+
+          <a href="#programs">
+            5-Month Advanced Program
+          </a>
+
+          <a href="#programs">
+            Weekend Batch
+          </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+          <h4>Explore</h4>
+
+          <a href="#curriculum">
+            Curriculum
+          </a>
+
+          <a href="#why-us">
+            Why Choose Us
+          </a>
+
+          <a href="#faq">
+            FAQs
+          </a>
+
+          <a href="#enquire">
+            Contact
+          </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+          <h4>Contact</h4>
+
+          <a href="tel:7075405295">
+            📞 7075405295
+          </a>
+
+          <a
+            href="https://wa.me/917075405295"
+            target="_blank"
+            rel="noopener">
+            💬 WhatsApp Us
+          </a>
+
+          <a href="#enquire">
+            Book Counselling
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 CK Performance Academy. All rights reserved.
+        </div>
+
+        <div>
+          Learn. Build. Optimise. Grow.
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       FLOATING CALL / WHATSAPP BUTTONS
+       ========================================================= -->
+
+  <div class="floating-actions">
+
+    <a
+      href="tel:7075405295"
+      class="floating-btn call-btn"
+      aria-label="Call CK Performance Academy">
+      📞
+    </a>
+
+    <a
+      href="https://wa.me/917075405295"
+      target="_blank"
+      rel="noopener"
+      class="floating-btn whatsapp-btn"
+      aria-label="WhatsApp CK Performance Academy">
+      💬
+    </a>
+
+  </div>
+
+
+  <!-- =========================================================
+       FORM SCRIPT
+       ========================================================= -->
+
+  <script>
+
+    function submitLead(event) {
+
+      event.preventDefault();
+
+      const name =
+        document.getElementById("name").value.trim();
+
+      const phone =
+        document.getElementById("phone").value.trim();
+
+      const program =
+        document.getElementById("program").value;
+
+
+      if (!name || !phone || !program) {
+
+        alert("Please fill in all the details.");
+
+        return;
+
+      }
+
+
+      /*
+       ==========================================================
+       IMPORTANT:
+
+       Your existing GTM container is already installed above.
+
+       We are NOT adding Google Ads, Meta Pixel or other tags here.
+
+       You can create those events/tags later inside GTM.
+       ==========================================================
+      */
+
+
+      if (window.dataLayer) {
+
+        window.dataLayer.push({
+
+          event: "lead_form_submit",
+
+          lead_name: name,
+
+          lead_phone: phone,
+
+          selected_program: program
+
+        });
+
+      }
+
+
+      alert(
+        "Thank you " +
+        name +
+        "! We will contact you shortly with the program details."
+      );
+
+    }
+
+
+    /* ==========================================================
+       MOBILE MENU
+       ========================================================== */
+
+    const mobileMenu =
+      document.querySelector(".mobile-menu");
+
+    const navLinks =
+      document.querySelector(".nav-links");
+
+
+    mobileMenu.addEventListener("click", function() {
+
+      if (navLinks.style.display === "flex") {
+
+        navLinks.style.display = "";
+
+      } else {
+
+        navLinks.style.display = "flex";
+
+        navLinks.style.flexDirection = "column";
+
+        navLinks.style.position = "absolute";
+
+        navLinks.style.top = "72px";
+
+        navLinks.style.left = "0";
+
+        navLinks.style.right = "0";
+
+        navLinks.style.padding = "20px";
+
+        navLinks.style.background = "#ffffff";
+
+        navLinks.style.borderBottom = "1px solid #eee";
+
+      }
+
+    });
+
   </script>
+
 
 </body>
 </html>
